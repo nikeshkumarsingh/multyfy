@@ -7,6 +7,12 @@ import{Electronics}from "./components/Electronincs";
 import{Jewelery}from "./components/Jewelery";
 import {Men}from "./components/Men";
 import{Women}from "./components/Women";
+import Footer from './components/Footer';
+import { Productdetail } from './components/productdetail';
+import { Signin } from './components/signin';
+import { Login } from './components/Login';
+import { Cart } from './components/cart';
+import { Private } from './components/Private';
 function App() {
   return (
     <div className="App">
@@ -17,7 +23,12 @@ function App() {
         <Route path="/jewelery" element={<Jewelery/>}></Route>
         <Route path="/men's" element={<Men/>}></Route>
         <Route path="/women's" element={<Women/>}></Route>
+        <Route path="/login" element={<Login/>}></Route>
+        <Route path="/signin" element={<Signin/>}></Route>
+        <Route path="/cart" element={<Private><Cart/></Private>}></Route>
+        <Route path="/product/:id" element={<Productdetail/>}></Route>
       </Routes>
+     
     </div>
   );
 }

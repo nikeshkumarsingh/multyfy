@@ -1,0 +1,114 @@
+{
+  "users": [
+    {
+      "name": "",
+      "emain": ""
+    },
+    {
+      "id": "1",
+      "email": "kituu@",
+      "password": "abcdefgh",
+      "firstname": "nikesh",
+      "lastname": "singh"
+    },
+    {
+      "id": "5nztkgN"
+    },
+    {
+      "id": "tLEdJ-H"
+    },
+    {
+      "id": "SMlJt8M"
+    },
+    {
+      "id": "sTxFSwg"
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "phone": "",
+      "": "123456789",
+      "id": "S36T8l1"
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "phone": "",
+      "": "123456789",
+      "id": "o8z7xeN"
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "phone": "",
+      "": "123456789",
+      "id": "CtRmyA3"
+    },
+    {
+      "name": "nikesh",
+      "email": "nikesh@nikesh.com",
+      "username": "nikesh",
+      "password": "123456",
+      "phone": "123456",
+      "id": "O4jdH32"
+    },
+    {
+      "name": "jordan",
+      "email": "jordan@jordan.com",
+      "username": "jordan",
+      "password": "jorrdan",
+      "phone": "123456789",
+      "id": "6mljnWp"
+    },
+    {
+      "name": "jumanji",
+      "email": "jumanji@jumanji.com",
+      "username": "jumanji",
+      "password": "jumanji",
+      "phone": "123456789",
+      "id": "E2IEDLd"
+    },
+    {
+      "name": "manish",
+      "email": "manish@mnish.com",
+      "username": "manish",
+      "password": "manish",
+      "phone": "123456",
+      "id": "L2ut_OZ"
+    },
+    {
+      "name": "thanos",
+      "email": "thanos@thanos.com",
+      "username": "thanos",
+      "password": "thanos",
+      "phone": "123456789",
+      "id": "ilFLAjS"
+    }
+  ],
+  "cart": [
+    {
+      "userid": "O4jdH32",
+      "item": [
+        8
+      ],
+      "id": "eikkNdR"
+    },
+    {
+      "userid": null,
+      "item": [
+        20
+      ],
+      "id": "kmKO_w6"
+    },
+    {
+      "userid": "O4jdH32",
+      "item": [
+        19
+      ],
+      "id": "iFB2ffI"
+    }
+  ]
+}
