@@ -8,10 +8,11 @@ import { AuthContext } from "./context/Authcontext";
 export const Productdetail = () => {
   const { id } = useParams();
   const [item, setItem] = useState([]);
-  const [cart,setCart]=useState([]);
-  
+  const [cart, setCart] = useState([]);
+
   const navigate = useNavigate();
   const { state } = useContext(AuthContext);
+  const { dispatch } = useContext(AuthContext);
   console.log(state);
   useEffect(() => {
     axios.get(`https://fakestoreapi.com/products/${id}`).then(({ data }) => {
@@ -25,62 +26,47 @@ export const Productdetail = () => {
     //         sestStat(true)
     //     }
   }, []);
- 
-//   const handlechoose=()=>{
-//       if(stat){
-//        //  updatecart()
-//          let newitem=[];
-//         //  cart.item.map((e)=>{
-//         //      newitem.push(e)
-//         //  })
-//         //  newitem.push(item.id)
-//         cart.map((e)=>{
-//             for(var i=0;i<e.item.length;i++){
-//                  newitem.push(e.item[i])
-//             }
-//         })
-//         newitem.push(item.id)
-//         console.log(newitem)
-//         updatecart(newitem)
-//       }
-//       else{
-//          //  handleSubmit()
-//       }
-//   }
-//   const updatecart=async(newitem)=>{
-    
-     
-//       try {
-//         await fetch(` http://localhost:8080/cart`, {
-//           method: "PATCH",
-//           body: JSON.stringify({
-//            userid:id,
-//            item:newitem
-//     }),
-//           headers: { "Content-Type": "application/json" },
-//         });
-//       } catch (err) {
-//         console.log(err);
-//       }
-//   }
-//   console.log(item)
-  const handleSubmit = async (e) => {
-    // e.preventDefault();
-    try {
-      await fetch(` http://localhost:8080/cart`, {
-        method: "POST",
-        body: JSON.stringify({
-          userid: state.token,
-          item: [item.id],
-        }),
-        headers: { "Content-Type": "application/json" },
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  };
+
+  //   const handlechoose=()=>{
+  //       if(stat){
+  //        //  updatecart()
+  //          let newitem=[];
+  //         //  cart.item.map((e)=>{
+  //         //      newitem.push(e)
+  //         //  })
+  //         //  newitem.push(item.id)
+  //         cart.map((e)=>{
+  //             for(var i=0;i<e.item.length;i++){
+  //                  newitem.push(e.item[i])
+  //             }
+  //         })
+  //         newitem.push(item.id)
+  //         console.log(newitem)
+  //         updatecart(newitem)
+  //       }
+  //       else{
+  //          //  handleSubmit()
+  //       }
+  //   }
+  //   const updatecart=async(newitem)=>{
+
+  //       try {
+  //         await fetch(` http://localhost:8080/cart`, {
+  //           method: "PATCH",
+  //           body: JSON.stringify({
+  //            userid:id,
+  //            item:newitem
+  //     }),
+  //           headers: { "Content-Type": "application/json" },
+  //         });
+  //       } catch (err) {
+  //         console.log(err);
+  //       }
+  //   }
+  //   console.log(item)
+
   const handleroute = () => {
-    handleSubmit();
+    dispatch({ type: "ADD_ITEM", productid: id });
     navigate("/cart", { replace: true });
   };
 
